@@ -82,11 +82,11 @@ function renderShowcase() {
                     <p class="text-xl text-slate-600 dark:text-slate-300 mb-6">${latestChallenge.description}</p>
                     <div class="flex gap-4">
                         <button type="button" data-link="${latestChallenge.exampleLink}"
-                           class="showcase-link z-10 px-6 py-3 rounded-lg border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-white transition-colors">
+                           class="showcase-link z-0 px-6 py-3 rounded-lg border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-white transition-colors">
                            View Examples
                         </button>
                         <button type="button" data-link="${latestChallenge.solutionLink}"
-                           class="showcase-link z-10 text-white bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                           class="showcase-link z-0 text-white bg-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                            View Solution
                         </button>
                     </div>
