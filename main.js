@@ -55,7 +55,7 @@ let currentChallenge = null;
 
 async function loadChallenges() {
     try {
-        const response = await fetch('/challenges.json');
+        const response = await fetch('./challenges.json');
         const data = await response.json();
         challenges = data.challenges.sort((a, b) => b.id - a.id);
         renderShowcase();
@@ -74,7 +74,9 @@ function renderShowcase() {
     showcase.innerHTML = `
         <article class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 animate-fade-in">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <img src="${latestChallenge.image}" alt="${latestChallenge.title}" class="w-full h-96 object-cover">
+                <img src="${latestChallenge.image}" alt="${latestChallenge.title}" 
+                    class="w-full h-96 object-cover"
+                    onerror="this.src='./assets/images/DailyUI-logo.jpg'">
                 <div class="p-8">
                     <h3 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">#${latestChallenge.id}: ${latestChallenge.title}</h3>
                     <p class="text-xl text-slate-600 dark:text-slate-300 mb-6">${latestChallenge.description}</p>
@@ -163,7 +165,9 @@ function showChallengeModal(id) {
                 </h3>
                 <p class="text-slate-600 dark:text-slate-300 mb-6">${challenge.description}</p>
                 ${challenge.completed ? `
-                    <img src="${challenge.image}" alt="${challenge.title}" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <img src="${challenge.image}" alt="${challenge.title}" 
+                        class="w-full h-64 object-cover rounded-lg mb-6"
+                        onerror="this.src='./assets/images/DailyUI-logo.jpg'">
                     <div class="flex justify-end gap-4">
                         <a href="${challenge.exampleLink}" target="_blank" rel="noopener noreferrer"
                            class="px-4 py-2 rounded-lg border-2 border-indigo-600 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white dark:hover:bg-indigo-400 dark:hover:text-white transition-colors">
