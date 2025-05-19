@@ -1,16 +1,6 @@
 {
   "challenges": [
     {
-      "id": "007",
-      "title": "Settings",
-      "description": "Design settings for security, privacy, or system preferences. Consider light/dark mode and accessibility.",
-      "image": "./assets/images/Daily-001-SignUpPage.png",
-      "exampleLink": "https://collectui.com/challenges/settings",
-      "solutionLink": "#",
-      "completed": true,
-      "date": "2025-05-16"
-    },
-    {
       "id": "002",
       "title": "Credit Card Checkout",
       "description": "Design a credit card checkout form or page. Don't forget the important elements such as the numbers, dates, security numbers, etc.",
